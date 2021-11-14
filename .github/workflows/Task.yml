@@ -28,7 +28,7 @@ jobs:
         pip install lxml
     - name: get skins
       run: | 
-        echo `date -d'+8 hours' +%Y-%m-%d/%H:%M:%S` get skins  >> do_time.log
+        echo `date -d'+8 hours' +%Y-%m-%d/%H:%M:%S` get skins and delete dir>> do_time.log
         python wzry.py  
     - name: delete skins
       run: |
