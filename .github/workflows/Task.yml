@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
-    - name: Install requests #安装requests lxml
+    - name: Install requests lxml #安装requests lxml
       run: |
         pip install requests
         pip install lxml
