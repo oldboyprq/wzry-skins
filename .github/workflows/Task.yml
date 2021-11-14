@@ -32,7 +32,7 @@ jobs:
         python wzry.py  
     - name: delete skins
       run: |
-        rm -f ./skins
+        rm -rf ./skins
     - name: Commit #
       run: |
         git config --global user.email oldboy_prq@163.com
