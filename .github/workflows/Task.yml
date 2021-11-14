@@ -30,7 +30,10 @@ jobs:
       run: | 
         echo `date -d'+8 hours' +%Y-%m-%d/%H:%M:%S` get skins  >> do_time.log
         python wzry.py  
-    - name: Commit #上传新的refresh_token到仓库
+    - name: delete skins
+      run: |
+        rm -f ./skins
+    - name: Commit #
       run: |
         git config --global user.email oldboy_prq@163.com
         git config --global user.name rosepig
