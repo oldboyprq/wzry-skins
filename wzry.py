@@ -66,6 +66,7 @@ def get_skins(num: int):
                     fp.write(image)
                     fp.close()
                     print("{}下载完成".format(image_name))
+                    break # auto 爬一个皮肤就退出，减少执行时间，正常使用注释掉这句即可。
             except Exception as e:
                 print("%s" % e)
 
