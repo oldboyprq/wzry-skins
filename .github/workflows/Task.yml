@@ -1,13 +1,14 @@
 name: Auto WZRY Skins
 
 on: 
+  workflow_dispatch:
   release:
     types: [published]
   push:
     branches: 
       - master
   schedule:
-    - cron: '10 * * * *'
+    - cron: '0 0 1/5 * *'
   watch:
     types: [started]
    
