@@ -7,6 +7,7 @@ import os
 import requests
 from lxml import etree
 import threading
+import datetime
 
 # 获取英雄信息
 r = requests.get("https://pvp.qq.com/web201605/js/herolist.json")
@@ -59,7 +60,8 @@ def get_skins(num: int):
             url = "http://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/{}/{}-bigskin-{}.jpg".format(code, code,
                                                                                                           j + 1)
             index_j = skin_names[j].index('&')
-            image_name = skin_names[j][:index_j] + '.jpg'
+            time_name = str(datetime.datetime.now())[:19]
+            image_name = skin_names[j][:index_j] + time_name+'.jpg'
             image = requests.get(url).content
             try:
                 with open('./skins/{}/{}'.format(name, image_name), 'wb') as fp:
